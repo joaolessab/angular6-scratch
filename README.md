@@ -10,3 +10,8 @@
 - node -v
 - npm -v
 - npm install -g @angular/cli;
+
+## Creating and Running Project ##
+- ng new (project-name);
+- cd (project-name);
+- ng serve;
