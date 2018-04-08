@@ -15,3 +15,4 @@
 - ng new (project-name);
 - cd (project-name);
 - ng serve;
+- Open your localhost:4200;
