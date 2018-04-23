@@ -11,6 +11,12 @@ import { Component, OnInit } from '@angular/core';
     <h2>{{name.toUpperCase()}}</h2>
     <h2>{{greetUser()}}</h2>
     <h2>{{siteUrl}}</h2>
+
+    <!-- Property Bindings -->
+    <input [id]="myId" type="text" value="Ronaldo">
+    <input [disabled]="false" [id]="myId" type="text" value="Ronaldo">
+    <input [disabled]="isDisabled" [id]="myId" type="text" value="Ronaldo">
+    <input bind-disabled="isDisabled" [id]="myId" type="text" value="Ronaldo">
   `,
   styleUrls: ['./test.component.css']
 })
@@ -18,6 +24,10 @@ export class TestComponent implements OnInit {
 
   public name = "João";
   public siteUrl = window.location.href;
+
+  public myId = "testeId";
+  public isDisabled = true;
+
   constructor() { }
 
   ngOnInit() {
