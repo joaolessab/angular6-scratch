@@ -17,8 +17,26 @@ import { Component, OnInit } from '@angular/core';
     <input [disabled]="false" [id]="myId" type="text" value="Ronaldo">
     <input [disabled]="isDisabled" [id]="myId" type="text" value="Ronaldo">
     <input bind-disabled="isDisabled" [id]="myId" type="text" value="Ronaldo">
+
+    <!-- Class Bindings -->
+    <h2 class="text-success">Codevolution</h2>
+    <h2 [class]=successClass>Codevolution</h2>
+    <h2 class="text-special" [class]=successClass>Codevolution</h2>
+    <h2 [class.text-danger]=hasError>Codevolution</h2>
+    <h2 [ngClass]="messageClasses">Codevolution</h2>
   `,
-  styleUrls: ['./test.component.css']
+  //Style inline
+  styles: [`
+    .text-success{
+      color: green;
+    }
+    .text-danger{
+      color: red;
+    }
+    .text-special{
+      font-style: italic;
+    }
+  `]
 })
 export class TestComponent implements OnInit {
 
@@ -27,6 +45,15 @@ export class TestComponent implements OnInit {
 
   public myId = "testeId";
   public isDisabled = true;
+
+  public successClass = "text-success";
+  public hasError = true;
+  public isSpecial = true;
+  public messageClasses = {
+    "text-success": !this.hasError,
+    "text-danger": !this.hasError,
+    "text-special": this.isSpecial
+  };
 
   constructor() { }
 
