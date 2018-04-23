@@ -24,6 +24,12 @@ import { Component, OnInit } from '@angular/core';
     <h2 class="text-special" [class]=successClass>Codevolution</h2>
     <h2 [class.text-danger]=hasError>Codevolution</h2>
     <h2 [ngClass]="messageClasses">Codevolution</h2>
+
+    <!-- Style Bindings -->
+    <h2 [style.color]="'orange'">Style Bindings</h2>
+    <h2 [style.color]="hasError ? 'red' : 'green'">Style Bindings</h2>
+    <h2 [style.color]="highLightColor">Style Bindings</h2>
+    <h2 [ngStyle]="titleStyles">Style Bindings</h2>
   `,
   //Style inline
   styles: [`
@@ -53,6 +59,12 @@ export class TestComponent implements OnInit {
     "text-success": !this.hasError,
     "text-danger": !this.hasError,
     "text-special": this.isSpecial
+  };
+
+  public highLightColor = "purple";
+  public titleStyles = {
+    color: "blue",
+    fontStyle: "italic"
   };
 
   constructor() { }
