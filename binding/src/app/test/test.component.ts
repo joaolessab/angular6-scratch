@@ -30,6 +30,12 @@ import { Component, OnInit } from '@angular/core';
     <h2 [style.color]="hasError ? 'red' : 'green'">Style Bindings</h2>
     <h2 [style.color]="highLightColor">Style Bindings</h2>
     <h2 [ngStyle]="titleStyles">Style Bindings</h2>
+
+    <!-- Event Bindings -->
+    <button (click)="onClick()">Greet</button>
+    <button (click)="onClickEvent($event)">Greet</button>  
+    <button (click)="greeting='Welcome João'">Greet</button> 
+    {{greeting}} 
   `,
   //Style inline
   styles: [`
@@ -67,9 +73,21 @@ export class TestComponent implements OnInit {
     fontStyle: "italic"
   };
 
+  public greeting = "";
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClick(){
+    alert('Welcome to Codevolution');
+    this.greeting = "Welcome to Codevolution";
+  }
+
+  onClickEvent(event){
+    alert(event);
+    this.greeting = event.type;
   }
 
   greetUser(){
