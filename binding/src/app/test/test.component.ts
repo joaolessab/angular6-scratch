@@ -11,12 +11,14 @@ import { Component, OnInit } from '@angular/core';
     <h2>{{name.toUpperCase()}}</h2>
     <h2>{{greetUser()}}</h2>
     <h2>{{siteUrl}}</h2>
+    <br><br>
 
     <!-- Property Bindings -->
     <input [id]="myId" type="text" value="Ronaldo">
     <input [disabled]="false" [id]="myId" type="text" value="Ronaldo">
     <input [disabled]="isDisabled" [id]="myId" type="text" value="Ronaldo">
     <input bind-disabled="isDisabled" [id]="myId" type="text" value="Ronaldo">
+    <br><br>
 
     <!-- Class Bindings -->
     <h2 class="text-success">Codevolution</h2>
@@ -24,22 +26,31 @@ import { Component, OnInit } from '@angular/core';
     <h2 class="text-special" [class]=successClass>Codevolution</h2>
     <h2 [class.text-danger]=hasError>Codevolution</h2>
     <h2 [ngClass]="messageClasses">Codevolution</h2>
+    <br><br>
 
     <!-- Style Bindings -->
     <h2 [style.color]="'orange'">Style Bindings</h2>
     <h2 [style.color]="hasError ? 'red' : 'green'">Style Bindings</h2>
     <h2 [style.color]="highLightColor">Style Bindings</h2>
     <h2 [ngStyle]="titleStyles">Style Bindings</h2>
+    <br><br>
 
     <!-- Event Bindings -->
     <button (click)="onClick()">Greet</button>
     <button (click)="onClickEvent($event)">Greet</button>  
     <button (click)="greeting='Welcome João'">Greet</button> 
     {{greeting}} 
+    <br><br>
 
     <!-- Template Reference Variables -->
     <input #myInput type="text">
     <button (click)="logMessage(myInput.value)">Log</button>
+    <br><br>
+
+    <!-- Two Way Binding -->
+    <input [(ngModel)]="wayName" type="text">
+    {{wayName}}
+    <br><br>
   `,
   //Style inline
   styles: [`
@@ -79,6 +90,8 @@ export class TestComponent implements OnInit {
 
   public greeting = "";
 
+  public wayName = "";
+
   constructor() { }
 
   ngOnInit() {
@@ -101,5 +114,4 @@ export class TestComponent implements OnInit {
   logMessage(message){
     alert(message);
   }
-
 }
