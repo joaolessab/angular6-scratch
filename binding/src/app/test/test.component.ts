@@ -36,6 +36,10 @@ import { Component, OnInit } from '@angular/core';
     <button (click)="onClickEvent($event)">Greet</button>  
     <button (click)="greeting='Welcome João'">Greet</button> 
     {{greeting}} 
+
+    <!-- Template Reference Variables -->
+    <input #myInput type="text">
+    <button (click)="logMessage(myInput.value)">Log</button>
   `,
   //Style inline
   styles: [`
@@ -92,6 +96,10 @@ export class TestComponent implements OnInit {
 
   greetUser(){
     return "Hello " + this.name;
+  }
+
+  logMessage(message){
+    alert(message);
   }
 
 }
