@@ -21,6 +21,32 @@ import { Component, OnInit } from '@angular/core';
       <div *ngSwitchCase="'green'">You picked the green color</div>
       <div *ngSwitchDefault>Pick again</div>
     </div>
+
+    <!-- ngFor -->
+    <h2>Normal</h2>
+    <div *ngFor="let uniqueColor of colors; index as i">
+      <p [ngStyle]="{'color': uniqueColor}">{{i}} - {{color}}</p>
+    </div>
+
+    <h2>First</h2>
+    <div *ngFor="let uniqueColor of colors; first as f">
+      <p>{{f}} - {{uniqueColor}}</p>
+    </div>
+
+    <h2>Last</h2>
+    <div *ngFor="let uniqueColor of colors; last as l">
+      <p>{{l}} - {{uniqueColor}}</p>
+    </div>
+
+    <h2>Odd - ímpar</h2>
+    <div *ngFor="let uniqueColor of colors; odd as o">
+      <p>{{o}} - {{uniqueColor}}</p>
+    </div>
+
+    <h2>Odd - par</h2>
+    <div *ngFor="let uniqueColor of colors; even as e">
+      <p>{{e}} - {{uniqueColor}}</p>
+    </div>
   `,
   styleUrls: ['./test.component.css']
 })
@@ -28,6 +54,7 @@ export class TestComponent implements OnInit {
 
   public displayName = true;
   public color = "blue";
+  public colors = ["red", "blue", "green", "yellow", "purple"];
   constructor() { }
 
   ngOnInit() {
