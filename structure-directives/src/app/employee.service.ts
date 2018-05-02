@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+//Injectable is used to inject services in services
+//If we remove this, it will become a regular typescript class, nothing to do with Angular
 @Injectable()
 export class EmployeeService {
 
