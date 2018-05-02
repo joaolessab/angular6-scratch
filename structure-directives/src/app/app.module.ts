@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { TestingComponent } from './testing/testing.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeeDetailComponent } from './employee-detail/employee-detail.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { PipesComponent } from './pipes/pipes.component';
     AppComponent,
     TestComponent,
     TestingComponent,
-    PipesComponent
+    PipesComponent,
+    EmployeeListComponent,
+    EmployeeDetailComponent
   ],
   imports: [
     BrowserModule
