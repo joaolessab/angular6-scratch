@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { IEmployee } from './employee';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/throw';
 
 
 //Injectable is used to inject services in services
@@ -10,13 +12,20 @@ import { Observable } from 'rxjs/Observable';
 export class EmployeeService {
 
   private _url: string = "/assets/data/employees.json";
+  //URL for error response private _url: string = "/assets/data/employees1.json";
   //When we have an webserver, just replace the URL string for the webserver url
 
   constructor(private http: HttpClient) { }
 
   //We are expecting an array of Employee Interfaces that was created
   getEmployees(): Observable<IEmployee[]>{
-    return this.http.get<IEmployee[]>(this._url);
+    return this.http.get<IEmployee[]>(this._url)
+                      .catch(this.errorHandler);
+  }
+
+  //Event that triggers the error
+  errorHandler(error: HttpErrorResponse){
+    return Observable.throw(error.message || "Server Error");
   }
 
   /*getEmployees(){
