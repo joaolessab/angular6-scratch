@@ -19,7 +19,7 @@ export class EmployeeDetailComponent implements OnInit {
 
   //Called once the component is initialized
   ngOnInit() {
-    this.employees = this._employeeService.getEmployees();
+    this._employeeService.getEmployees().subscribe(data => this.employees = data);
+    //The method returns observables, so we need to subscribe to read the data
   }
-
 }
