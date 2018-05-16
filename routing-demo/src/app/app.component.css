@@ -1,0 +1,16 @@
+a{
+    height: 32px;
+    width: 100px;
+    background-color: #B2A696;
+    color: white;
+    padding: 4px;
+    margin: 4px;
+    text-decoration: none;
+    font: 'Calibri';
+    border-radius: 2px;
+}
+
+.active{
+    background-color: #FFFCD0;
+    color: black;
+}
