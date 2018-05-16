@@ -19,6 +19,7 @@ export class EmployeeDetailComponent implements OnInit {
 
   constructor(private _employeeService: EmployeeService) { }
 
+  // This event is called Lifecycle Hooks
   //Called once the component is initialized
   ngOnInit() {
     this._employeeService.getEmployees()
