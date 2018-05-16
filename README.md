@@ -1,5 +1,8 @@
 # Angular-5--MyWebApp
 
+## Official Documentation and API ##
+https://angular.io/docs
+
 ## Development Enviroment ##
 * [Node](https://nodejs.org/en/download/);
 * Npm (It'll be installed with Node)
