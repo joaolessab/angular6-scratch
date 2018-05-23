@@ -15,7 +15,7 @@ https://angular.io/docs
 - npm install -g @angular/cli;
 
 ## Creating and Running Project ##
-- ng new (project-name);
-- cd (project-name);
+- ng new project-name;
+- cd project-name;
 - ng serve;
 - Open your localhost:4200;
