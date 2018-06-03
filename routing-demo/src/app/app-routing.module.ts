@@ -20,8 +20,8 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routingComponents = [
-                                  DepartmentListComponent, 
-                                  EmployeeListComponent, 
+                                  DepartmentListComponent,
+                                  EmployeeListComponent,
                                   PageNotFoundComponent,
                                   DepartmentDetailComponent
                                  ];

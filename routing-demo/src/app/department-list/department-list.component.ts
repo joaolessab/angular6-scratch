@@ -38,6 +38,7 @@ export class DepartmentListComponent implements OnInit {
 
   onSelect(department) {
     this.router.navigate(['/departments', department.id]);
+    //this.router.navigate([department.id], {relativeTo: this.route}); //This is appending to the url independent of what is the current url
   }
 
   isSelected(department){
