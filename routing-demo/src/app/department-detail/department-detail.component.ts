@@ -8,6 +8,10 @@ import { PARAMETERS } from '@angular/core/src/util/decorators';
     <h3>You selected the department with the id number = {{departmentId}}</h3>
     <a (click)="goPrevious()">Previous</a>
     <a (click)="goNext()">Next</a>
+
+    <div>
+      <button (click)="goToDepartments()">Back</button>
+    </div>
   `,
   styles: []
 })
@@ -33,6 +37,11 @@ export class DepartmentDetailComponent implements OnInit {
   goNext() {
     let nextId = this.departmentId + 1;
     this.router.navigate(['/departments', nextId]);
+  }
+
+  goToDepartments() {
+    let selectedId = this.departmentId ? this.departmentId : null;
+    this.router.navigate(['/departments', {id: selectedId}]);
   }
 
 }
