@@ -1,7 +1,8 @@
-# Angular-5--MyWebApp
+# Angular-6
 
 ## Official Documentation and API ##
 https://angular.io/docs
+https://angular.io/api
 
 ## Development Enviroment ##
 * [Node](https://nodejs.org/en/download/);
@@ -19,6 +20,11 @@ https://angular.io/docs
 - cd project-name;
 - ng serve;
 - Open your localhost:4200;
+
+## CLI Commands ##
+ng new project-name
+ng g c componentName
+ng serve
 
 ## What is Angular ##
 * It's a framework to build client side applications;
@@ -40,6 +46,12 @@ https://angular.io/docs
 ## Semanthic Versioning ##
 - Version 1.2.3
 - Major, minor, Fix(patch)
+
+## Angular 6 Changes ##
+- Sync of major versions: angular framework, angular CLI and angular material + cdk (all version 6.0.0);
+- <ng-template> instead of <template>;
+- Registering providers changed (Services), take a look [here](https://imgur.com/a/y4FKkHs);
+- ngModelChange, take a look [here](https://imgur.com/a/yBPUOZS);
 
 ## Building Blocks ##
 * Modules: features that can be split. For example, we can have a module to a normal user and a module to an admin user;
@@ -72,11 +84,9 @@ main.ts >> app.module.ts >> app.components.ts
 - class = typescript;
 - metadata = information angular needs to decide if it's a component or a regular class;
 
-## To create a Component ##
-"ng g c componentName"
-
 ## What happens when we create a Component ##
 - New folder is created inside app folder;
 - We can delete the test.component.spec.ts;
 - app.module.ts is modified = imported new component, declarations refreshed;
 - Now we have to call the tag that is defined on the new component to the main html view;
+ 
