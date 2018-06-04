@@ -25,6 +25,15 @@ https://angular.io/api
 ng new project-name
 ng g c componentName
 ng serve
+ng update <packagename>
+ng add 
+ng generate @angular/material:material-nav --name=my-nav
+ng generate @angular/material:material-dashboard --name=my-dashboard
+ng generate @angular/material:material-table --name=my-table
+
+## Angular Elements ##
+It will be possible to export pieces of components to other applications, example: Vue.js.
+For now it's only possible with another Angular apps and versions;
 
 ## What is Angular ##
 * It's a framework to build client side applications;
