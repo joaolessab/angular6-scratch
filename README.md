@@ -105,9 +105,15 @@ main.ts >> app.module.ts >> app.components.ts
 - Click on Show me how to update;
 - Switch from HttpModule and the Http service to HttpClientModule and the HttpClient service;
 - Make sure you are using Node 8 or later;
-- npm install -g @angular/cli
-- npm install @angular/cli
-- ng update @angular/cli
+
+- ng uninstall -g @angular/cli;
+- npm cache verify
+- npm install -g @angular/cli@latest;
+
+- rm -rf node_modules dist
+- npm install --save-dev @angular/cli@latest;
+- npm install;
+
 - ng update @angular/core
 - ng update @angular/material
 - ng update
