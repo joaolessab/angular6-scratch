@@ -100,3 +100,17 @@ main.ts >> app.module.ts >> app.components.ts
 - app.module.ts is modified = imported new component, declarations refreshed;
 - Now we have to call the tag that is defined on the new component to the main html view;
  
+## Updating Angular 5 to Angular 6 ##
+- Access: https://update.angular.io/
+- Click on Show me how to update;
+- Switch from HttpModule and the Http service to HttpClientModule and the HttpClient service;
+- Make sure you are using Node 8 or later;
+- npm install -g @angular/cli
+- npm install @angular/cli
+- ng update @angular/cli
+- ng update @angular/core
+- ng update @angular/material
+- ng update
+- npm install -g rxjs-tslint
+- rxjs-5-to-6-migrate -p src/tsconfig.app.json
+- remove rxjs-compat;
