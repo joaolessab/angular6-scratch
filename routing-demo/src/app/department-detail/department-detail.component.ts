@@ -6,8 +6,17 @@ import { PARAMETERS } from '@angular/core/src/util/decorators';
   selector: 'app-department-detail',
   template: `
     <h3>You selected the department with the id number = {{departmentId}}</h3>
-    <a (click)="goPrevious()">Previous</a>
-    <a (click)="goNext()">Next</a>
+
+    <p>
+      <button (click)="showOverview()">Overview</button>
+      <button (click)="showContact()">Contact</button>
+    </p>
+    <router-outlet></router-outlet>
+
+    <p>
+      <button (click)="goPrevious()">Previous</button>
+      <button (click)="goNext()">Next</button>
+    </p>
 
     <div>
       <button (click)="goToDepartments()">Back</button>
@@ -45,4 +54,11 @@ export class DepartmentDetailComponent implements OnInit {
     //this.router.navigate(['../', {id: selectedId}], {relativeTo: this.route});
   }
 
+  showOverview() {
+    this.router.navigate(['overview'], {relativeTo: this.route});
+  }
+
+  showContact() {
+    this.router.navigate(['contact'], {relativeTo: this.route});
+  }
 }
