@@ -1,9 +1,9 @@
 # Angular-6
 
 ## Official Documentation and API and References ##
-https://angular.io/docs
-https://angular.io/api
-[Video Classes](https://www.youtube.com/watch?v=0eWrpsCLMJQ&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ)
+- https://angular.io/docs
+- https://angular.io/api
+- [Video Classes](https://www.youtube.com/watch?v=0eWrpsCLMJQ&list=PLC3y8-rFHvwhBRAgFinJR8KHIrCdTkZcZ)
 
 ## Development Enviroment ##
 * [Node](https://nodejs.org/en/download/);
